@@ -1,0 +1,29 @@
+=========================================================================
+Docker
+=========================================================================
+----------
+Containers
+----------
+Show containers
+    -> docker container ls
+Delete Container
+    ->  docker rm -f containerName/ID
+----------
+Networks
+----------
+Create Network
+    -> docket network create networkName
+Show Networks
+    -> docker network ls
+Disconnect Network
+    -> docker network disconnect networkName
+Remove Network
+    -> docker network rm networkName
+-----------
+Examples
+-----------    
+https://thenets.org/how-to-install-mysql-and-phpmyadmin-with-docker/
+IP: 184.168.126.83
+Port: 3306
+username: vps-docker-mysql
+Pwd: e@i-v_1S/Iane12q
