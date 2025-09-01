@@ -1,0 +1,41 @@
+provides detailed information about the operating system.
+ -> cat /etc/os-release
+
+ CentOS:
+
+ Update the system: Keep your server's software up-to-date to ensure you have the latest security patches.
+    -> sudo yum update
+
+For CentOS and RHEL, the command will be:
+    -> yum check-update or dnf check-update
+
+Add User 
+    ->     sudo adduser newusername
+Add password to user
+    ->     sudo passwd newusername
+ 
+Grant Sudo access: Add the new user to the wheel group to give them sudo access, allowing them to run commands with root privileges
+
+    ->     sudo usermod -aG wheel newusername
+
+Disable root access:
+Open the SSH configuration file:
+    ->     sudo nano /etc/ssh/sshd_config    
+    Find the line #PermitRootLogin yes and change it to: no
+
+    sudo timedatectl set-timezone continent/country
+
+Set Up a Firewall 
+Enable and configure firewalld: CentOS uses firewalld for its firewall. You can enable and configure it to allow necessary ports.
+
+    sudo reboot
+
+Install Java:
+        sudo dnf install java-17-openjdk
+
+        java -version
+
+Show hidden files and dot files 
+    -> ls -a
+Install vim 
+    ->     sudo dnf install vim
