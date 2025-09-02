@@ -17,6 +17,15 @@ Add password to user
 Grant Sudo access: Add the new user to the wheel group to give them sudo access, allowing them to run commands with root privileges
 
     ->     sudo usermod -aG wheel newusername
+Then, switch to that user
+
+su user
+and ask for root privileges:
+
+sudo su - 
+Enter password for new user:
+
+[sudo] password for user:
 
 Disable root access:
 Open the SSH configuration file:
@@ -39,3 +48,10 @@ Show hidden files and dot files
     -> ls -a
 Install vim 
     ->     sudo dnf install vim
+
+Display list of installed softwares
+    -> sudo yum list installed
+
+Display available space
+    -> free -h
+    -> 
