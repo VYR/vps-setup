@@ -27,3 +27,9 @@ IP: 184.168.126.83
 Port: 3306
 username: vps-docker-mysql
 Pwd: e@i-v_1S/Iane12q
+
+----------
+Jenkin
+----------
+Install using docker
+    -> docker run -d -p 9090:8080 -p 50000:50000 --restart=on-failure:5 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
