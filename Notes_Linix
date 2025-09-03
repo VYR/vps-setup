@@ -9,6 +9,10 @@ provides detailed information about the operating system.
 For CentOS and RHEL, the command will be:
     -> yum check-update or dnf check-update
 
+    sudo userdel -r username
+    sudo groupdel groupname
+    sudo groupdel -f groupname
+
 Add User 
     ->     sudo adduser newusername
 Add password to user
@@ -55,3 +59,13 @@ Display list of installed softwares
 Display available space
     -> free -h
     -> 
+Allow ports:
+    ->     sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+    ->     sudo firewall-cmd --reload
+    ->     sudo firewall-cmd --zone=public --list-ports
+    ->     sudo firewall-cmd --list-all
+
+Copy files:
+    -> sudo cp /var/www/easybusbooking.com/html/spring-boot-mysql-crud.war /home/vyrvyr/tomcat-war-files/
+
+    
