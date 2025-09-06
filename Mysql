@@ -1,0 +1,26 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-centos-8
+
+1. sudo dnf install mysql-server
+2. sudo systemctl start mysqld.service
+2.1 sudo systemctl status mysqld
+3. sudo systemctl enable mysqld
+4. Set root password:
+    -> sudo mysql_secure_installation
+    -> username root, pwd: e@i-v_1S/Iane12q
+4. Test connection : mysqladmin -u root -p version
+
+-----------------
+Create New User
+-----------------
+->  sudo mysql -u root -p
+->  CREATE USER 'easybus_db_user'@'%' IDENTIFIED BY 'Ea&syBusDbUser@625#!';
+->  GRANT ALL PRIVILEGES ON *.* TO 'easybus_db_user'@'%';
+->  FLUSH PRIVILEGES;
+->  EXIT; 
+
+Configure Remote Connection:
+  /etc/mysql/mysql.conf.d/mysqld.cnf.
+Adjust bind-address:
+Locate the bind-address parameter within the [mysqld] section.
+To allow connections from any IP address, change bind-address = 127.0.0.1
+
