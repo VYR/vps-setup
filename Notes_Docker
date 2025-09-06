@@ -33,3 +33,7 @@ Jenkin
 ----------
 Install using docker
     -> docker run -d -p 9090:8080 -p 50000:50000 --restart=on-failure:5 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+
+-----------
+Tomcat
+-----------
