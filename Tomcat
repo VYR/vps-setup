@@ -1,0 +1,10 @@
+
+
+1. sudo groupadd tomcat
+2. sudo useradd -r -m -U -d /opt/tomcat -s /bin/false tomcat
+3. export VER=11.0.10
+4. sudo wget https://dlcdn.apache.org/tomcat/tomcat-11/v${VER}/bin/apache-tomcat-${VER}.tar.gz
+5. sudo tar -xvf apache-tomcat-$VER.tar.gz -C /opt/tomcat --strip-components=1
+6. sudo chown -R tomcat: /opt/tomcat
+7. sudo sh -c 'chmod +x /opt/tomcat/bin/*.sh'
+8. 
