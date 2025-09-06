@@ -8,6 +8,11 @@ Show containers
     -> docker container ls
 Delete Container
     ->  docker rm -f containerName/ID
+Restart Exited containers
+    -> docker start $(docker ps -a -q -f status=exited)
+Restart all containers
+    -> docker restart $(docker ps -q)
+
 ----------
 Networks
 ----------
